@@ -20,8 +20,17 @@ require('keymappings')
 
 require('lspconfig').pyright.setup({})
 local nvim_lsp = require('lspconfig')
-
+require("harpoon").setup({
+    global_settings = {
+        save_on_toggle = false,
+        save_on_change = true,
+        enter_on_sendcmd = true,
+        tmux_autoclose_windows = false,
+        excluded_filetypes = { "harpoon" }
+    },
+})
 -- Use an on_attach function to only map the following keys
+require("telescope").load_extension('harpoon')
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end

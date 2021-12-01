@@ -1,0 +1,101 @@
+return require(
+    "packer"
+).startup(
+    function()
+        use {
+            "neovim/nvim-lspconfig"
+        }
+        use {
+            "hrsh7th/cmp-nvim-lsp"
+        }
+        use {
+            "hrsh7th/cmp-buffer"
+        }
+        use {
+            "hrsh7th/cmp-path"
+        }
+        use {
+            "hrsh7th/cmp-cmdline"
+        }
+        use {
+            "hrsh7th/nvim-cmp"
+        }
+        --use {
+        use {
+            "nvim-lua/plenary.nvim"
+        }
+        use {
+            "ThePrimeagen/harpoon"
+        }
+        use {
+            "nvim-telescope/telescope-project.nvim"
+        }
+        use {
+            "wbthomason/packer.nvim",
+            opt = true
+        }
+        use {
+            "folke/which-key.nvim",
+            config = function()
+                require(
+                    "which-key"
+                ).setup {
+                    triggers_blacklist = {}
+
+                    -- your configuration comes here
+                    -- or leave it empty to use the default settings
+                    -- refer to the configuration section below
+                }
+            end
+        }
+        use {
+            "terrortylor/nvim-comment"
+        }
+        use {
+            "lukas-reineke/format.nvim"
+        }
+        -- Color scheme
+
+        use {
+            "sainnhe/gruvbox-material"
+        }
+
+        -- Fuzzy finder
+
+        use {
+            "nvim-telescope/telescope.nvim",
+            requires = {
+                {
+                    "nvim-lua/popup.nvim"
+                },
+                {
+                    "nvim-lua/plenary.nvim"
+                }
+            }
+        }
+
+        -- LSP and completion
+
+        use {
+            "nvim-lua/completion-nvim"
+        }
+
+        -- Lua development
+
+        use {
+            "tjdevries/nlua.nvim"
+        }
+
+        -- Vim dispatch
+
+        use {
+            "tpope/vim-dispatch"
+        }
+
+        -- Fugitive for Git
+
+        use {
+            "tpope/vim-fugitive"
+        }
+    end
+)

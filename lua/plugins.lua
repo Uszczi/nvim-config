@@ -1,7 +1,16 @@
-return require(
-    "packer"
-).startup(
+return require("packer").startup(
     function()
+        use "rbong/vim-flog"
+
+        use {
+            "kyazdani42/nvim-tree.lua",
+            requires = {
+                "kyazdani42/nvim-web-devicons" 
+            },
+            config = function()
+                require "nvim-tree".setup {}
+            end
+        }
         use {
             "neovim/nvim-lspconfig"
         }
@@ -20,7 +29,6 @@ return require(
         use {
             "hrsh7th/nvim-cmp"
         }
-        --use {
         use {
             "nvim-lua/plenary.nvim"
         }
@@ -37,9 +45,7 @@ return require(
         use {
             "folke/which-key.nvim",
             config = function()
-                require(
-                    "which-key"
-                ).setup {
+                require("which-key").setup {
                     triggers_blacklist = {}
 
                     -- your configuration comes here

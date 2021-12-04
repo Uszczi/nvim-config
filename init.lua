@@ -6,6 +6,13 @@ local execute = vim.api.nvim_command
 require('settings')
 
 
+
+
+
+
+
+require'nvim-tree'.setup()
+
 local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
@@ -38,7 +45,13 @@ local on_attach = function(client, bufnr)
 
   -- Enable completion triggered by <c-x><c-o>
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
+print("Ataching ")
+print("Ataching ")
+print("Ataching ")
+print("Ataching ")
+print("Ataching ")
+print("Ataching ")
+print("Ataching ")
   -- Mappings.
   local opts = { noremap=true, silent=true }
 
@@ -67,7 +80,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
+local servers = { 'pyright', 'tsserver' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,

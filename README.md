@@ -7,6 +7,7 @@
 <leader>fh Telescope help_tags
 <leader>ft Telescope resume
 <leader>fe Telescope current_buffer_fuzzy_find
+<leader>fE Telescope grep_string 
 
 ### Basic
 <C-w>o Make the current window the only one on the screen. All other windows are closed.

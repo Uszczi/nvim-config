@@ -11,9 +11,9 @@ return require("packer").startup(
                 require "nvim-tree".setup {}
             end
         }
-        use {
-            "neovim/nvim-lspconfig"
-        }
+         use {
+            "neovim/nvim-lspconfig" }
+         use { 'Mofiqul/dracula.nvim' } 
         use {
             "hrsh7th/cmp-nvim-lsp"
         }
@@ -29,6 +29,8 @@ return require("packer").startup(
         use {
             "hrsh7th/nvim-cmp"
         }
+ use 'hrsh7th/cmp-vsnip'
+ use 'hrsh7th/vim-vsnip'
         use {
             "nvim-lua/plenary.nvim"
         }

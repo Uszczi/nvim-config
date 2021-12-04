@@ -1,5 +1,8 @@
-return require("packer").startup(
+return require(
+    "packer"
+).startup(
     function()
+<<<<<<< HEAD
         use "rbong/vim-flog"
 
         use {
@@ -14,6 +17,11 @@ return require("packer").startup(
          use {
             "neovim/nvim-lspconfig" }
          use { 'Mofiqul/dracula.nvim' } 
+=======
+        use {
+            "neovim/nvim-lspconfig"
+        }
+>>>>>>> parent of 9f58cf2 (add some tree)
         use {
             "hrsh7th/cmp-nvim-lsp"
         }
@@ -29,8 +37,12 @@ return require("packer").startup(
         use {
             "hrsh7th/nvim-cmp"
         }
+<<<<<<< HEAD
  use 'hrsh7th/cmp-vsnip'
  use 'hrsh7th/vim-vsnip'
+=======
+        --use {
+>>>>>>> parent of 9f58cf2 (add some tree)
         use {
             "nvim-lua/plenary.nvim"
         }
@@ -47,7 +59,9 @@ return require("packer").startup(
         use {
             "folke/which-key.nvim",
             config = function()
-                require("which-key").setup {
+                require(
+                    "which-key"
+                ).setup {
                     triggers_blacklist = {}
 
                     -- your configuration comes here

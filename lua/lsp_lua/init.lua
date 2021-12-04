@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+-- Your custom attach function for nvim-lspconfig goes here.
+>>>>>>> parent of 9f58cf2 (add some tree)
 local on_attach = function(client, bufnr)
     require('completion').on_attach()
 
@@ -19,6 +23,7 @@ local on_attach = function(client, bufnr)
 
 end
 
+<<<<<<< HEAD
 local platform = vim.loop.os_uname().sysname
 if platform:find("^Windows") ~= nil then
     sumneko_root_path = "C:\\lua_lsp"
@@ -32,3 +37,13 @@ require('nlua.lsp.nvim').setup(require('lspconfig'), { cmd = {sumneko_binary, "-
   on_attach = on_attach,
 })
 
+=======
+
+local sumneko_root_path = "/usr/lib/lua-language-server"
+local sumneko_binary = sumneko_root_path .. "/bin/Linux/main.lua"
+-- To get builtin LSP running, do something like:
+-- NOTE: This replaces the calls where you would have before done `require('nvim_lsp').sumneko_lua.setup()`
+require('nlua.lsp.nvim').setup(require('lspconfig'), { cmd = {"/usr/bin/lua-language-server", "-E", sumneko_root_path .. "/main.lua"},
+  on_attach = on_attach,
+})
+>>>>>>> parent of 9f58cf2 (add some tree)

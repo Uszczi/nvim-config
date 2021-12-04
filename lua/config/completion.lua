@@ -3,47 +3,24 @@ local cmp = require("cmp")
 cmp.setup(
     {
         snippet = {
-            expand = function(
-                args)
-                vim.fn[
-                    "vsnip#anonymous"
-                ](
-                    args.body
-                )
-                require(
-                    "luasnip"
-                ).lsp_expand(
-                    args.body
-                )
-                vim.fn[
-                    "UltiSnips#Anon"
-                ](
-                    args.body
-                )
-                require "snippy".expand_snippet(
-                    args.body
-                )
+            expand = function(args)
+                vim.fn["vsnip#anonymous"](args.body)
+        --        require("luasnip").lsp_expand(args.body)
+        --        vim.fn["UltiSnips#Anon"](args.body)
+        --        require "snippy".expand_snippet(args.body)
             end
         },
         mapping = {
-            ["<C-b>"] = cmp.mapping(
-                cmp.mapping.scroll_docs(
-                    -4
-                )
-            ),
+            ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4)),
             ["<C-f>"] = cmp.mapping(
-                cmp.mapping.scroll_docs(
-                    4
-                ),
+                cmp.mapping.scroll_docs(4),
                 {
                     "i",
                     "c"
                 }
             ),
             ["<C-Space>"] = cmp.mapping(
-                cmp.mapping.complete(
-
-                ),
+                cmp.mapping.complete(),
                 {
                     "i",
                     "c"
@@ -52,12 +29,8 @@ cmp.setup(
             ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
             ["<C-e>"] = cmp.mapping(
                 {
-                    i = cmp.mapping.abort(
-
-                    ),
-                    c = cmp.mapping.close(
-
-                    )
+                    i = cmp.mapping.abort(),
+                    c = cmp.mapping.close()
                 }
             ),
             ["<CR>"] = cmp.mapping.confirm(
@@ -69,10 +42,10 @@ cmp.setup(
         sources = cmp.config.sources(
             {
                 {
-                    name = "nvim_lsp",
+                    name = "nvim_lsp"
                 },
                 {
-                    name = "vsnip",
+                    name = "vsnip"
                 } -- For vsnip users.
                 -- { name = 'luasnip' }, -- For luasnip users.
                 -- { name = 'ultisnips' }, -- For ultisnips users.
@@ -80,7 +53,7 @@ cmp.setup(
             },
             {
                 {
-                    name = "buffer",
+                    name = "buffer"
                 }
             }
         )
@@ -120,19 +93,8 @@ cmp.setup.cmdline(
 
 -- TODO some day
 --  -- Setup lspconfig.
-local capabilities =
-    require(
-    "cmp_nvim_lsp"
-).update_capabilities(
-    vim.lsp.protocol.make_client_capabilities(
-
-    )
-)
+local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require(
-    "lspconfig"
-)[
-    "pyright"
-].setup {
+require("lspconfig")["pyright"].setup {
     capabilities = capabilities
 }

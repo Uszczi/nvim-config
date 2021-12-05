@@ -2,7 +2,7 @@ return require("packer").startup(
     function()
         use "rbong/vim-flog"
 use 'kyazdani42/nvim-web-devicons'
-
+use 'onsails/lspkind-nvim'
 use {'pwntester/octo.nvim', config=function()
   require"octo".setup({
   default_remote = {"upstream", "origin"}; -- order to try remotes

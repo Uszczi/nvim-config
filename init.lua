@@ -10,7 +10,6 @@ require('settings')
 
 
 
-
 require'nvim-tree'.setup()
 
 local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
@@ -25,7 +24,8 @@ require('telescope').load_extension('project')
 require('nvim_comment').setup()
 require('keymappings')
 
-require('lspconfig').pyright.setup({})
+-- See what happens
+-- require('lspconfig').pyright.setup({})
 local nvim_lsp = require('lspconfig')
 require("harpoon").setup({
     global_settings = {
@@ -41,10 +41,10 @@ require("telescope").load_extension('harpoon')
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+--  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
   -- Enable completion triggered by <c-x><c-o>
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+ -- buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 print("Ataching ")
 print("Ataching ")
 print("Ataching ")

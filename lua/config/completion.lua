@@ -42,10 +42,12 @@ cmp.setup(
         sources = cmp.config.sources(
             {
                 {
-                    name = "nvim_lsp"
+                    name = "nvim_lsp",
+                    keyword_length = 2
                 },
                 {
-                    name = "vsnip"
+                    name = "vsnip",
+                    keyword_length = 3
                 } -- For vsnip users.
                 -- { name = 'luasnip' }, -- For luasnip users.
                 -- { name = 'ultisnips' }, -- For ultisnips users.
@@ -53,10 +55,23 @@ cmp.setup(
             },
             {
                 {
-                    name = "buffer"
+                    name = "buffer",
+                    keyword_length = 4
                 }
             }
-        )
+        ),
+
+formatting = {
+  format = require("lspkind").cmp_format({with_text = true, menu = ({
+      buffer = "[Buffer]",
+      nvim_lsp = "[LSP]",
+      luasnip = "[LuaSnip]",
+      nvim_lua = "[Lua]",
+      latex_symbols = "[Latex]",
+    })}),
+},
+
+
     }
 )
 

@@ -15,6 +15,10 @@ nnoremap <leader>fV :Ex<cr>
 nnoremap <silent> <leader>fp :Telescope project<cr>
 
 
+
+" TODO
+set completeopt=menu,menuone,noselect
+
 " TODO check how does the sourcing files works 
 nnoremap <A-j> :m . +1<CR>==
 nnoremap <A-k> :m . -2<CR>==

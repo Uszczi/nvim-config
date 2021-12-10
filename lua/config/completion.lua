@@ -43,7 +43,7 @@ cmp.setup(
             {
                 {
                     name = "nvim_lsp",
-                    keyword_length = 2
+                   keyword_length = 1
                 },
                 {
                     name = "vsnip",

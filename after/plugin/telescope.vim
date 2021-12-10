@@ -6,6 +6,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fm <cmd>Telescope man_pages<cr>
 nnoremap <leader>fr <cmd>Telescope oldfiles<cr>
+nnoremap <leader>ff <cmd>Telescope git_files<cr>
 nnoremap <leader>ft <cmd>Telescope resume<cr>
 nnoremap <leader>fe <cmd>Telescope current_buffer_fuzzy_find<cr>
 nnoremap <leader>op <cmd>NvimTreeToggle<cr>
@@ -15,6 +16,7 @@ nnoremap <leader>fV :Ex<cr>
 nnoremap <silent> <leader>fp :Telescope project<cr>
 
 
+nnoremap <F5> :UndotreeToggle<CR>
 
 " TODO
 set completeopt=menu,menuone,noselect
@@ -47,13 +49,6 @@ nnoremap <leader>q :call ToggleQFList(0)<CR>
 nnoremap <leader>Q :Telescope loclist<CR>
 
 let g:nvim_tree_git_hl = 1 
-" -- let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
-" -- let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
-" -- let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
-" -- let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
-" -- let g:nvim_tree_disable_window_picker = 1 "0 by default, will disable the window picker.
-" -- let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
-" -- let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.
 let g:nvim_tree_respect_buf_cwd = 1
 
 let g:the_primeagen_qf_l = 0

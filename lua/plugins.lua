@@ -9,7 +9,7 @@ use {"lazytanuki/nvim-mapper",
 }
 use "mbbill/undotree"
 use {"ellisonleao/glow.nvim"}
-
+use "ggandor/lightspeed.nvim"
 use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
  use "kyazdani42/nvim-web-devicons"
         use "onsails/lspkind-nvim"

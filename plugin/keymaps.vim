@@ -1,4 +1,4 @@
-""" Basic 
+""" Basic
 nnoremap n nzz
 nnoremap N Nzz
 
@@ -9,11 +9,10 @@ inoremap <A-k> <Esc>:m . -2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
-nnoremap <leader>tl :tabnext<CR>
-nnoremap <leader>tl :tabnext<CR>
-nnoremap <leader>th :tabprevious<CR>
-nnoremap <leader>tj :bprevious<CR>
-nnoremap <leader>tk :bnext<CR>
+nnoremap <leader>eh :tabprevious<CR>
+nnoremap <leader>ej :bprevious<CR>
+nnoremap <leader>ek :bnext<CR>
+nnoremap <leader>el :tabnext<CR>
 
 " Do I really need them?
 nnoremap  <leader>wh <C-W>h
@@ -22,7 +21,7 @@ nnoremap  <leader>wk <C-W>k
 nnoremap  <leader>wl <C-W>l
 
 
-""" Dap mode and dap ui 
+""" Dap mode and dap ui
 nnoremap <silent><leader>dd :lua require('dapui').toggle()<CR>
 nnoremap <silent><leader>de :lua require('dap').toggle_breakpoint()<CR>
 nnoremap <silent><leader>df :lua require('dap').continue()<CR>
@@ -95,7 +94,7 @@ nnoremap <leader>q :call ToggleQFList(0)<CR>
 nnoremap <leader>Q :Telescope loclist<CR>
 
 " TODO this shouldnt be here
-" let g:nvim_tree_git_hl = 1 
+" let g:nvim_tree_git_hl = 1
 " let g:nvim_tree_respect_buf_cwd = 1
 
 let g:the_primeagen_qf_l = 0

@@ -21,6 +21,5 @@ utils.opt('w', 'number', true)
 utils.opt('w', 'relativenumber', true)
 utils.opt('o', 'clipboard','unnamed,unnamedplus')
 utils.opt('o', 'mouse', 'a')
-utils.opt('o', 'undodir', '~/.vim/undodir') -- TODO test that 
 
 vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'

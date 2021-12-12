@@ -1,7 +1,10 @@
 local use = require("packer").use
 return require("packer").startup(
     function()
+        use "vim-airline/vim-airline"
+        use "vim-airline/vim-airline-themes"
         use "rbong/vim-flog"
+        use "tpope/vim-surround"
         use {
             "lazytanuki/nvim-mapper",
             config = function()
@@ -78,7 +81,7 @@ return require("packer").startup(
 
         -- Color scheme
 
-        use "sainnhe/gruvbox-material"
+        use "gruvbox-community/gruvbox"
 
         -- Fuzzy finder
 

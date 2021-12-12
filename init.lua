@@ -10,7 +10,7 @@ end
 vim.cmd [[packadd packer.nvim]]
 vim.cmd "autocmd BufWritePost plugins.lua PackerCompile"
 
-require("plugins")            
+require("plugins")
 
 require("nvim-mapper").setup({})
 require("telescope").load_extension("project")
@@ -18,7 +18,20 @@ require("telescope").load_extension("harpoon")
 require("rust-tools").setup({})
 require("nvim_comment").setup()
 
-vim.cmd 'colorscheme gruvbox-material'
+require("plugins.completion")
+require("plugins.dap-ui")
+require("plugins.dap")
+require("plugins.format")
+require("plugins.harpoon")
+require("plugins.lsp")
+require("plugins.nvim-tree")
+
+
+
+vim.cmd('source ' .. '~/.config/nvim/plugins/keymaps.vim')
+vim.cmd('source ' .. '~/.config/nvim/plugins/set.vim')
+vim.cmd('source ' .. '~/.config/nvim/plugins/airline.vim')
+vim.cmd('source ' .. '~/.config/nvim/plugins/colorscheme-gruvbox.vim')
 
 -- TODO Create autogroup
 vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'

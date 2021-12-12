@@ -20,6 +20,8 @@ nnoremap  <leader>wj <C-W>j
 nnoremap  <leader>wk <C-W>k
 nnoremap  <leader>wl <C-W>l
 
+map gf :edit <cfile><cr>
+
 
 """ Dap mode and dap ui
 nnoremap <silent><leader>dd :lua require('dapui').toggle()<CR>

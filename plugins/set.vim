@@ -11,7 +11,7 @@ set wildignore+=**/.git/*
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
-set undofile """""
+set undofile
 
 set expandtab
 set shiftwidth=4
